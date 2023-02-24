@@ -32,6 +32,15 @@ dotnet sln add AccountOwnerServer\AccountOwnerServer.csproj
         /* Instalar o pacote NLog - Nuget */
         dotnet add package NLog.Extensions.Logging --version 5.2.1
 
+    /* Adicionar o projeto de Entidades - Models */
+    dotnet new classlib --name Entities -f net6.0
+
+    /* Adicionar o projeto na solução */
+    dotnet sln add Entities\Entities.csproj
+
+/* Na pasta Entities */
+    /* Instalar o pacote do Pomelo */
+    dotnet add package Pomelo.EntityFrameworkCore.MySql --version 6.0.2
 
 
 git add .
