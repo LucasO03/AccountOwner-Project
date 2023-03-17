@@ -29,4 +29,9 @@ public class OwnerRepository  : RepositoryBase<Owner>, IOwnerRepository
             .Include(ac => ac.Accounts)
             .FirstOrDefault();
     }
+
+    public void CreateOwner(Owner owner)
+    {
+        Create(owner);
+    }
 }
