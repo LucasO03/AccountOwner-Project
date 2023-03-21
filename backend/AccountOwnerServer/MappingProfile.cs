@@ -13,5 +13,7 @@ public class MappingProfile : Profile
         CreateMap<Account, AccountDto>();
 
         CreateMap<OwnerForCreationDto, Owner>();
+
+        CreateMap<OwnerForUpdateDto, Owner>();
     }
 }
