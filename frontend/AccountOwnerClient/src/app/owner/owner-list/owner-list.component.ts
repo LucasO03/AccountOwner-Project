@@ -19,7 +19,7 @@ export class OwnerListComponent implements OnInit {
     private repository: OwnerRepositoryService,
     private errorHandler: ErrorHandlerService,
     private router: Router
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.getAllOwners();
@@ -39,5 +39,10 @@ export class OwnerListComponent implements OnInit {
   public getOwnerDetails = (id) => {
     const detailsUrl: string = `/owner/details/${id}`;
     this.router.navigate([detailsUrl]);
+  }
+
+  public redirectToUpdatePage = (id) => {
+    const updateUrl: string = `/owner/update/${id}`;
+    this.router.navigate([updateUrl]);
   }
 }
